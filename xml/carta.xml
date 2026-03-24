@@ -103,3 +103,104 @@
 
         <!-- BOCADILLOS CALIENTES -->
     <plato tipo="bocadillos_calientes">
+        <nombre>Bocadillo de Calamares</nombre>
+        <precio>5.75</precio>
+        <descripcion>Bocadillo tradicional de calamares fritos, servido en pan crujiente con limón fresco para exprimir al gusto.</descripcion>
+        <calorias>500</calorias>
+        <caracteristicas>
+            <item>Contiene molúscos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_calientes">
+        <nombre>Bocadillo de Tortilla</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de tortilla española, con patata y huevo, servido en pan crujiente, perfecto para un almuerzo rápido y sabroso.</descripcion>
+        <calorias>400</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_calientes">
+        <nombre>Lomo</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de lomo de cerdo a la plancha, jugoso y recién hecho, acompañado de ingredientes al gusto como queso, pimientos o salsa.</descripcion>
+        <calorias>600</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_calientes">
+        <nombre>Chorizo</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de chorizo a la plancha, con su característico sabor intenso y ligeramente picante, perfecto para los amantes del embutido.</descripcion>
+        <calorias>550</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_calientes">
+        <nombre>Beicon</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de beicon a la plancha, dorado y sabroso, con un toque crujiente y su característico sabor intenso.</descripcion>
+        <calorias>600</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+            <item>Puede contener lácteos</item>
+        </caracteristicas>
+    </plato>
+
+    <!-- BOCADILLOS FRÍOS -->
+    <plato tipo="bocadillos_frios">
+        <nombre>Jamón Serrano</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de jamón serrano, con su sabor intenso y salado, perfecto para los amantes del embutido tradicional.</descripcion>
+        <calorias>400</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_frios">
+        <nombre>Queso Manchego</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de queso manchego, con su sabor intenso y ligeramente salado, perfecto para los amantes del queso tradicional.</descripcion>
+        <calorias>450</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene lácteos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_frios">
+        <nombre>Atún</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de atún en conserva, con su sabor característico y jugoso, perfecto para un almuerzo rápido y sabroso.</descripcion>
+        <calorias>350</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene pescado</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_frios">
+        <nombre>Vegetal</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de una variedad de vegetales frescos, como lechuga, tomate, pepino y pimientos, con un toque de mayonesa o alioli para realzar los sabores.</descripcion>
+        <calorias>300</calorias>
+        <caracteristicas>
+            <item>Vegano</item>
+            <item>Sin gluten</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bocadillos_frios">
+        <nombre>Mixto</nombre>
+        <precio>4.50</precio>
+        <descripcion>Bocadillo de pan crujiente relleno de jamón serrano y queso manchego, con su combinación de sabores intensos y salados, perfecto para los amantes del embutido y el queso tradicional.</descripcion>
+        <calorias>500</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene lácteos</item>
+        </caracteristicas>
+    </plato>
+    
