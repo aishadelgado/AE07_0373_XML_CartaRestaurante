@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <!-- TAPAS -->
+    <plato tipo="tapas">
+        <nombre>Patatas Bravas</nombre>
+        <precio>4.50</precio>
+        <descripcion>Patatas fritas con salsa brava casera y alioli.</descripcion>
+        <calorias>320</calorias>
+        <caracteristicas>
+            <item>Vegano</item>
+            <item>Sin gluten</item>
+            <item>Picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Chocos</nombre>
+        <precio>9.50</precio>
+        <descripcion>Chocos tiernos fritos al estilo tradicional, crujientes por fuera y jugosos por dentro, acompañados de limón fresco.</descripcion>
+        <calorias>250</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Sepia</nombre>
+        <precio>9.75</precio>
+        <descripcion>Sepia a la vinagreta, con alioli y limón fresco.</descripcion>
+        <calorias>200</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Pulpo Gallego</nombre>
+        <precio>21.00</precio>
+        <descripcion>Pulpo cocido en su punto, cortado en rodajas y servido sobre base de patata, aderezado con pimentón, sal gruesa y un generoso chorrito de aceite de oliva.</descripcion>
+        <calorias>400</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+            <item>Picante</item>
+            <item>Contiene molúsco</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Pinchos</nombre>
+        <precio>7.00</precio>
+        <descripcion>Selección de pinchos variados sobre pan, con ingredientes frescos y combinaciones tradicionales y creativas, perfectos para picar y compartir.</descripcion>
+        <calorias>450</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+            <item>Picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Olivas</nombre>
+        <precio>2.50</precio>
+        <descripcion>Selección de aceitunas aliñadas al estilo tradicional, con hierbas aromáticas y un toque de aceite de oliva, perfectas para acompañar cualquier bebida.</descripcion>
+        <calorias>100</calorias>
+        <caracteristicas>
+            <item>Vegano</item>
+            <item>Sin gluten</item>
+            <item>Picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Croquetas</nombre>
+        <precio>7.00</precio>
+        <descripcion>Croquetas caseras cremosas por dentro y crujientes por fuera, elaboradas con bechamel y una selección de ingredientes tradicionales.</descripcion>
+        <calorias>450</calorias>
+        <caracteristicas>
+            <item>Contiene lácteos</item>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Calamares Andaluza</nombre>
+        <precio>7.00</precio>
+        <descripcion>Calamares frescos enharinados y fritos al momento al estilo andaluz, ligeros y crujientes, servidos con limón.</descripcion>
+        <calorias>500</calorias>
+        <caracteristicas>
+            <item>Contiene molúscos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Totilla de patatas</nombre>
+        <precio>4.50</precio>
+        <descripcion>Clásica tortilla española elaborada con patata y huevo, jugosa por dentro y dorada por fuera.</descripcion>
+        <calorias>400</calorias>
+        <caracteristicas>
+            <item>Sin gluten</item>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="tapas">
+        <nombre>Albóndigas</nombre>
+        <precio>8.75</precio>
+        <descripcion>Albóndigas caseras elaboradas con carne picada, especias y salsa tradicional, tiernas y llenas de sabor, cocinadas lentamente.</descripcion>
+        <calorias>600</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+
+        <!-- BOCADILLOS CALIENTES -->
+    <plato tipo="bocadillos_calientes">
