@@ -203,4 +203,139 @@
             <item>Contiene lácteos</item>
         </caracteristicas>
     </plato>
-    
+
+        <!-- PLATOS COMBINADOS -->
+    <plato tipo="platos_combinados">
+        <nombre>Bistec con patatas y huevo</nombre>
+        <precio>8.75</precio>
+        <descripcion>Bistec a la plancha acompañado de patatas fritas y un huevo frito, una combinación clásica y sabrosa que ofrece una comida completa y satisfactoria.</descripcion>
+        <calorias>800</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="platos_combinados">
+        <nombre>Lomo con patatas y huevo</nombre>
+        <precio>8.75</precio>
+        <descripcion>Lomo de cerdo a la plancha acompañado de patatas fritas y un huevo frito, una combinación clásica y sabrosa que ofrece una comida completa y satisfactoria.</descripcion>
+        <calorias>750</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="platos_combinados">
+        <nombre>Beicon con patatas y huevo</nombre>
+        <precio>8.75</precio>
+        <descripcion>Beicon a la plancha acompañado de patatas fritas y un huevo frito, una combinación clásica y sabrosa que ofrece una comida completa y satisfactoria.</descripcion>
+        <calorias>850</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+            <item>Puede contener lácteos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="platos_combinados">
+        <nombre>butifarra con patatas y huevo</nombre>
+        <precio>8.75</precio>
+        <descripcion>Butifarra a la plancha acompañada de patatas fritas y un huevo frito, una combinación clásica y sabrosa que ofrece una comida completa y satisfactoria.</descripcion>
+        <calorias>800</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="platos_combinados">
+        <nombre>Chorizo con patatas y huevo</nombre>
+        <precio>8.75</precio>
+        <descripcion>Chorizo a la plancha acompañado de patatas fritas y un huevo frito, una combinación clásica y sabrosa que ofrece una comida completa y satisfactoria.</descripcion>
+        <calorias>850</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+
+        <!-- BANDEJAS -->
+    <plato tipo="bandejas">
+        <nombre>Ibéricos variados</nombre>
+        <precio>15.00</precio>
+        <descripcion>Selección de embutidos ibéricos de alta calidad, como jamón serrano, chorizo, lomo y salchichón, acompañados de pan crujiente y aceitunas.</descripcion>
+        <calorias>600</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bandejas">
+        <nombre>Quesos variados</nombre>
+        <precio>15.00</precio>
+        <descripcion>Selección de quesos variados, como manchego, cabrales, queso de cabra y queso azul, acompañados de pan crujiente y frutos secos.</descripcion>
+        <calorias>700</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene lácteos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="bandejas">
+        <nombre>Mariscos variados</nombre>
+        <precio>20.00</precio>
+        <descripcion>Selección de mariscos frescos, como gambas, mejillones, almejas y langostinos, acompañados de limón fresco y salsa alioli.</descripcion>
+        <calorias>500</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene molúscos</item>
+        </caracteristicas>
+    </plato>
+
+        <!-- TORRADAS -->
+    <plato tipo="torradas">
+        <nombre>Torrada de Jamón Serrano</nombre>
+        <precio>4.50</precio>
+        <descripcion>Torrada de pan crujiente con jamón serrano, con su sabor intenso y salado, perfecta para los amantes del embutido tradicional.</descripcion>
+        <calorias>400</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="torradas">
+        <nombre>Torrada de Queso Manchego</nombre>
+        <precio>4.50</precio>
+        <descripcion>Torrada de pan crujiente con queso manchego, con su sabor intenso y ligeramente salado, perfecta para los amantes del queso tradicional.</descripcion>
+        <calorias>450</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene lácteos</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="torradas">
+        <nombre>Torrada de Atún</nombre>
+        <precio>4.50</precio>
+        <descripcion>Torrada de pan crujiente con atún en conserva, con su sabor característico y jugoso, perfecta para un almuerzo rápido y sabroso.</descripcion>
+        <calorias>350</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Contiene pescado</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="torradas">
+        <nombre>Torrada de Lomo</nombre>
+        <precio>4.50</precio>
+        <descripcion>Torrada de pan crujiente con lomo de cerdo a la plancha, jugoso y recién hecho, acompañado de ingredientes al gusto como queso, pimientos o salsa.</descripcion>
+        <calorias>600</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Picante</item>
+        </caracteristicas>
+    </plato>
+    <plato tipo="torradas">
+        <nombre>Torrada de Chorizo</nombre>
+        <precio>4.50</precio>
+        <descripcion>Torrada de pan crujiente con chorizo a la plancha, con su característico sabor intenso y ligeramente picante, perfecto para los amantes del embutido.</descripcion>
+        <calorias>550</calorias>
+        <caracteristicas>
+            <item>Contiene huevo</item>
+            <item>Puede ser picante</item>
+        </caracteristicas>
+    </plato>
+</menu>
