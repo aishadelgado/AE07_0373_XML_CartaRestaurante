@@ -1,0 +1,471 @@
+/* ============================================================
+   BAR LA TASCA — Carta Tradicional
+   Inspirado en carta impresa: papel kraft, títulos expresivos,
+   lista de platos con línea punteada nombre · · · precio
+   ============================================================ */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+ 
+/* ---------- Variables ---------- */
+:root {
+    --azul:         #1a2a5e;
+    --azul-oscuro:  #0f1a3d;
+    --kraft:        #e8dcc8;
+    --kraft-oscura: #d9c9ae;
+    --kraft-clara:  #f2ead8;
+    --carbon:       #2a2420;
+    --carbon-suave: #4a3f38;
+    --humo:         #7a6e65;
+    --dorado:       #b8922a;
+    --blanco:       #fdfaf4;
+    --trans:        0.2s ease;
+}
+ 
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+ 
+/* ---------- Fondo con textura de papel ---------- */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--kraft);
+    color: var(--carbon);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23paper)' opacity='0.06'/%3E%3C/svg%3E"),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 79px,
+            rgba(180,155,110,0.04) 79px,
+            rgba(180,155,110,0.04) 80px
+        );
+}
+ 
+/* ---------- Cabecera ---------- */
+header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 4rem 2rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+ 
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 18px,
+        rgba(255,255,255,0.015) 18px,
+        rgba(255,255,255,0.015) 19px
+    );
+    pointer-events: none;
+}
+ 
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--dorado) 30%, var(--dorado) 70%, transparent 100%);
+}
+ 
+header .logo-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--dorado);
+    opacity: 0.85;
+}
+ 
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+ 
+header .subtitulo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.72rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    opacity: 0.8;
+    margin-top: 0.6rem;
+}
+ 
+header .info-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3rem 2rem;
+    margin-top: 1.8rem;
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.3px;
+}
+ 
+header .info-bar span { display: flex; align-items: center; gap: 0.4rem; }
+header .info-bar i { color: var(--dorado); font-size: 0.65rem; }
+ 
+/* ---------- Navegación ---------- */
+nav.categorias {
+    background: var(--azul);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+ 
+nav.categorias ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+ 
+nav.categorias li a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.85rem 1.1rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color var(--trans);
+    position: relative;
+}
+ 
+nav.categorias li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%; height: 2px;
+    background: var(--dorado);
+    transition: transform var(--trans);
+}
+ 
+nav.categorias li a:hover,
+nav.categorias li a.activo { color: var(--blanco); }
+ 
+nav.categorias li a:hover::after,
+nav.categorias li a.activo::after { transform: translateX(-50%) scaleX(1); }
+ 
+/* ---------- Contenedor principal ---------- */
+main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+ 
+/* ---------- Leyenda ---------- */
+.leyenda {
+    background: rgba(255,255,255,0.35);
+    border: 1px solid var(--kraft-oscura);
+    padding: 1rem 1.5rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+ 
+.leyenda h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--humo);
+    white-space: nowrap;
+}
+ 
+.leyenda h3 i { color: var(--dorado); margin-right: 0.3rem; }
+ 
+.leyenda-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    flex: 1;
+}
+ 
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--humo);
+    font-weight: 400;
+}
+ 
+.leyenda-item i { color: var(--azul); font-size: 0.7rem; }
+ 
+/* ---------- Sección de categoría ---------- */
+.seccion { margin-bottom: 4rem; }
+ 
+.seccion-header {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--azul);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+ 
+.seccion-header .icono-seccion {
+    color: var(--azul);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    opacity: 0.7;
+    background: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+ 
+.seccion-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--azul);
+    line-height: 1;
+}
+ 
+/* ---------- Lista de platos ---------- */
+.platos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+ 
+.plato-card {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.75rem 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-left: none;
+    border-bottom: 1px solid rgba(180, 155, 110, 0.35);
+    transition: background var(--trans), padding var(--trans);
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Fila nombre · · · precio */
+.plato-cabecera {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+ 
+.plato-nombre {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.97rem;
+    font-weight: 700;
+    color: var(--carbon);
+    line-height: 1.3;
+    flex-shrink: 0;
+    max-width: 65%;
+}
+ 
+.plato-card.destacado .plato-nombre { color: var(--azul-oscuro); }
+ 
+/* Línea punteada entre nombre y precio */
+.plato-cabecera::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px dotted var(--kraft-oscura);
+    margin: 0 0.5rem;
+    margin-bottom: 3px;
+}
+ 
+.plato-precio {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.97rem;
+    font-weight: 700;
+    color: var(--carbon);
+    white-space: nowrap;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+ 
+.badge-destacado {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6rem;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    font-weight: 600;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0.1rem;
+}
+ 
+.plato-descripcion {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--humo);
+    line-height: 1.4;
+}
+ 
+.plato-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    padding-top: 0.2rem;
+    border-top: none;
+}
+ 
+.plato-calorias {
+    font-size: 0.7rem;
+    color: var(--humo);
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+ 
+.plato-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+ 
+.plato-tags .tag {
+    font-size: 0.66rem;
+    color: var(--azul);
+    background: rgba(26, 42, 94, 0.07);
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(26, 42, 94, 0.12);
+    transition: background var(--trans);
+}
+ 
+.plato-tags .tag:hover { background: rgba(26, 42, 94, 0.13); }
+ 
+/* ---------- Footer ---------- */
+footer {
+    background: var(--azul-oscuro);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+    margin-top: 4rem;
+}
+ 
+footer::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin-bottom: 2.5rem;
+    opacity: 0.5;
+}
+ 
+footer .footer-nombre {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    margin-bottom: 0.3rem;
+}
+ 
+footer .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem 2rem;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+ 
+footer .footer-info span { display: flex; align-items: center; gap: 0.4rem; }
+footer .footer-info i { font-size: 0.65rem; }
+ 
+footer .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 1.5rem auto;
+    max-width: 200px;
+}
+ 
+footer .footer-copy { font-size: 0.68rem; opacity: 0.3; letter-spacing: 0.5px; }
+ 
+/* ---------- Sin resultados ---------- */
+.sin-resultados {
+    text-align: center;
+    padding: 3rem;
+    color: var(--humo);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+ 
+/* ---------- Animación ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-6px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+ 
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--kraft-oscura); }
+::-webkit-scrollbar-thumb { background: var(--azul); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--azul-oscuro); }
+ 
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    header { padding: 3rem 1.5rem 2.5rem; }
+    main { padding: 0 1.2rem; margin: 2rem auto; }
+    nav.categorias li a { padding: 0.75rem 0.75rem; font-size: 0.68rem; letter-spacing: 1px; }
+    .seccion-header h2 { font-size: 1.6rem; }
+    .plato-nombre { max-width: 60%; }
+    .leyenda { padding: 0.9rem 1rem; gap: 0.7rem; }
+}
+ 
+@media (max-width: 480px) {
+    header h1 { font-size: 2.2rem; letter-spacing: 3px; }
+    header .subtitulo { font-size: 0.65rem; letter-spacing: 4px; }
+    nav.categorias li a { padding: 0.7rem 0.55rem; font-size: 0.62rem; }
+    .seccion-header h2 { font-size: 1.4rem; }
+    .plato-nombre { max-width: 55%; font-size: 0.9rem; }
+    .plato-precio { font-size: 0.9rem; }
+}
